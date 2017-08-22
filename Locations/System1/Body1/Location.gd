@@ -1,15 +1,15 @@
 extends Node
 ## Edit Below this line
-const name = "Earth" # Body Name
-const pop = "13 Billion" # Population
-const rot = 0.6 # Sprite Rotation Speed
-const industry = "Agriculture" # Industry type
+const name = "Body2" # Body Name
+const pop = "13000000000" # Population (must be a number)
+const rot = 0.6 # Sprite Rotation Speed (must be between 0 and 1)
+const industry = "IndustryType" # Industry type
 ## Blurb is the info that a planet shows
-const blurb = "Earth is the home planet of the humans. Good agriculture, Abundant Water but sadly any useful minerals and fuels are long gone."
+const blurb = "BodyInfoGoesHere"
 const market = true # 'true' if the body has a market 'false' if not
 const shipyard = true # 'true' if the body has a shipyard 'false' if not
 const fuel = true # 'true' if the body has a fuel market 'false' if not
-const soldships = ["shuttle","corvette"] # Lists ships sold at shipyard.
+const soldships = ["shipTypeA","shipTypeB"] # Lists ships sold at shipyard.
 ## if shipyard = false then set 'const soldships = []' like so
 ## marketSellPrices : These are the markets base selling prices. 
 ## or what a market sells cargo for
@@ -29,21 +29,13 @@ var marketBuyPrices = {"food":3,"water":4,"ore":300,"hightechgoods":2000,"steel"
 ## These should relate to the marketBuyPrices 
 ## (pay more for high demand) and are randomized below
 var marketDemandAmt = {"food":0,"water":0,"ore":5000,"hightechgoods":4000,"steel":3200,"luxuries":450,"consumergoods":240}
-var fuelPriceMin = 6 #
-var fuelPriceMax = 15
-var fuelPriceMid = 11
-var fuelAmtMin = 1
-var fuelAmtMax = 3 
+var fuelPriceMin = 6 # minimum price of fuel
+var fuelPriceMax = 15 # maximum price of fuel
+var fuelPriceMid = 11 # mid point of fuel price
+var fuelAmtMin = 1 # minimum amout of fuel available
+var fuelAmtMax = 3 # maximum amount of fuel available
 
-## do not edit below this line
-
-var marketSellPriceRand = {} # Do not edit
-var marketSupplyAmtRand = {} # Do not edit
-var marketBuyPriceRand = {} # Do not edit
-var marketDemandAmtRand = {} # Do not edit
-var fuelPrice #leave empty
-var fuelAmount #leave empty
-var fuelSitu #leave empty
+# DO NOT EDIT ANYTHING BELOW THIS LINE #
 func _ready():
 	print(name+".gd called")# Do not edit
 func setupVars():
