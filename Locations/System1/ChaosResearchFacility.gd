@@ -1,15 +1,15 @@
 extends Node
 ## Edit Below this line
-const name = "Body2" # Body Name
-const pop = "13000000000" # Population (must be a number)
-const rot = 0.6 # Sprite Rotation Speed (must be between 0 and 1)
-const industry = "IndustryType" # Industry type
+const name = "Chaos Research Facility" # Body Name
+const pop = "999" # Population (must be a number)
+const rot = 0.7 # Sprite Rotation Speed (must be between 0 and 1)
+const industry = "Research" # Industry type
 ## Blurb is the info that a planet shows
-const blurb = "BodyInfoGoesHere"
+const blurb = "Some secrets are best left alone"
 const market = true # 'true' if the body has a market 'false' if not
-const shipyard = true # 'true' if the body has a shipyard 'false' if not
+const shipyard = false # 'true' if the body has a shipyard 'false' if not
 const fuel = true # 'true' if the body has a fuel market 'false' if not
-const soldships = ["shipTypeA","shipTypeB"] # Lists ships sold at shipyard.
+const soldships = [] # Lists ships sold at shipyard.
 ## if shipyard = false then set 'const soldships = []' like so
 ## marketSellPrices : These are the markets base selling prices. 
 ## or what a market sells cargo for
@@ -24,11 +24,11 @@ var marketSupplyAmt = {"food":23000,"water":23000,"ore":200,"hightechgoods":40,"
 ## or what a body pays you for cargo
 ## These should always be  lower than marketSellPrices and are
 ## randomized below
-var marketBuyPrices = {"food":3,"water":4,"ore":300,"hightechgoods":2000,"steel":230,"luxuries":700,"consumergoods":140}
+var marketBuyPrices = {"food":3,"water":4,"ore":300,"hightechgoods":2000,"steel":230,"luxuries":700,"consumergoods":140,"salt":100,"slaves":500}
 ## marketDemandAmt : This is how many the market wants to buy 
 ## These should relate to the marketBuyPrices 
 ## (pay more for high demand) and are randomized below
-var marketDemandAmt = {"food":0,"water":0,"ore":5000,"hightechgoods":4000,"steel":3200,"luxuries":450,"consumergoods":240}
+var marketDemandAmt = {"food":0,"water":0,"ore":5000,"hightechgoods":4000,"steel":3200,"luxuries":450,"consumergoods":240,"salt":1000,"slaves":5000}
 var fuelPriceMin = 6 # minimum price of fuel
 var fuelPriceMax = 15 # maximum price of fuel
 var fuelPriceMid = 11 # mid point of fuel price
